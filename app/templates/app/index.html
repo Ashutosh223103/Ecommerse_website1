@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block main-content %}
+<div class="container mt-4">
+    <div class="card-group">
+      <div class="row ">
+        {% for p in products %}
+
+          <div class="card" style="width: 50rem;">
+            <img src="{{ p.img.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{p.name}}</h5>
+              <p class="card-text"><strong>Discount:</strong> {{p.dis}}</p>
+              <p><span>Price: </span>{{p.price}}</h2></p>
+              <form method="get" action=" {% url 'buy' p.id %} ">
+
+              <button type="submit" class="btn btn-primary mb-3">Buy Property</button>
+            </form>
+
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+

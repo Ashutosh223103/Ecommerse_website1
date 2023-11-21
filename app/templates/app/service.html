@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block main-content %}
+<div class="container">
+    <h1 class="text-center text-danger">Property and Rental Services</h1>
+    <p class="text-center text-primary">Welcome to our website! Here, you can browse our available properties for rent and find the perfect home for you and your family.</p>
+    <div class="card-group">
+  <div class="card">
+    <img src="{% static 'app/images/banner/r1.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Property Listing</h5>
+      <p class="card-text"> A service that allows property owners or agents to list their properties for rent. This service can include features such as adding property details, photos, location, and pricing information.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'app/images/banner/r9.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rental Property</h5>
+      <p class="card-text"> A service that allows users to search for available properties based on their location, budget, and other preferences.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'app/images/banner/r8.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Property Booking</h5>
+      <p class="card-text">A service that allows users to book a property they are interested in renting. This service can include features such as selecting the dates of the rental, making a payment, and receiving confirmation.</p>
+
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock  %}

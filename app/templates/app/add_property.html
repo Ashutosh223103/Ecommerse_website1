@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block main-content %}
+
+<div class="container">
+  <div>
+    {% for m in messages %}
+    {{m}}
+    {% endfor %}
+  </div>
+  <h2>Add Property</h2>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+
+</div>
+
+{% endblock %}
